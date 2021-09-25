@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap">
+  </link>
+  <link rel="stylesheet" href="style.css">
+  </link>
+</head>
+
+<body>
+  <div class="modal">
+    <div class="modal-content">
+      <input class="modal-title" placeholder="Título" type="text">
+      <input class="modal-text" placeholder="Criar uma tarefa..." type="text">
+      <span class="modal-close-button">Fechar</span>
+    </div>
+  </div>
+  <main>
+    <header>
+      <h2 class="header-title">To Do</h2>
+    </header>
+    <div id="form-container">
+      <form id="form" autocomplete="off">
+        <input id="note-title" placeholder="Título" type="text">
+        <input id="note-text" placeholder="Criar uma tarefa..." type="text">
+        <div id="form-buttons">
+          <button type="submit" id="submit-button">Confirmar</button>
+          <button type="button" id="form-close-button">Fechar</button>
+        </div>
+      </form>
+    </div>
+    <div id="notes"></div>
+    <div id="placeholder">
+      <img id="placeholder-logo" src="https://img.icons8.com/ios-filled/100/ffffff/ingredients-list.png">
+      <p id="placeholder-text">As tarefas adicionadas serão exibidas aqui</p>
+    </div>
+    <div id="color-tooltip">
+      <div class="color-option" data-color="#fff" id="white"></div>
+      <div class="color-option" data-color="#d7aefb" id="purple"></div>
+      <div class="color-option" data-color="#fbbc04" id="orange"></div>
+      <div class="color-option" data-color="#a7ffeb" id="teal"></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
