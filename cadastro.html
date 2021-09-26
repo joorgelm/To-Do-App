@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>To-Do</a>
+  </div>
+  <form class="modal-content" action="/action_page.php" method="post">
+    <div class="cadastro-titulo">
+      <h2>Cadastro</h2>
+    </div>
+    <div class="container-cadastro">
+      <label for="nickname"><b>Apelido</b></label>
+      <input type="text" placeholder="Insira um apelido" name="nickname" required>
+
+      <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="Insira um e-mail" name="email" required>
+
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Insira uma senha" name="psw" required>
+        
+      <button type="submit">Cadastrar</button>
+    </div>
+    <div style="background-color:#f1f1f1;">
+      <button type="button" class="cancelbtn cadastro" onclick="window.location.href='index.html'">Cancelar</button>
+    </div>
+  </form>
+</body>
+</html>
