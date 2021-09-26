@@ -1,16 +1,27 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap">
-  </link>
-  <link rel="stylesheet" href="style.css">
-  </link>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+  <div class="navbar">
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>To-Do</a>
+    <a href="login.html"><i class="fa fa-fw fa-user"></i>Login</a>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Procure pelo titulo" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+  </div>
   <div class="modal">
     <div class="modal-content">
-      <input class="modal-title" placeholder="Título" type="text">
+      <input class="modal-title" placeholder="Titulo" type="text">
       <input class="modal-text" placeholder="Criar uma tarefa..." type="text">
       <span class="modal-close-button">Fechar</span>
     </div>
@@ -21,7 +32,7 @@
     </header>
     <div id="form-container">
       <form id="form" autocomplete="off">
-        <input id="note-title" placeholder="Título" type="text">
+        <input id="note-title" placeholder="Titulo" type="text">
         <input id="note-text" placeholder="Criar uma tarefa..." type="text">
         <div id="form-buttons">
           <button type="submit" id="submit-button">Confirmar</button>
@@ -32,7 +43,7 @@
     <div id="notes"></div>
     <div id="placeholder">
       <img id="placeholder-logo" src="https://img.icons8.com/ios-filled/100/ffffff/ingredients-list.png">
-      <p id="placeholder-text">As tarefas adicionadas serão exibidas aqui</p>
+      <p id="placeholder-text">As tarefas adicionadas serao exibidas aqui</p>
     </div>
     <div id="color-tooltip">
       <div class="color-option" data-color="#fff" id="white"></div>

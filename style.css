@@ -257,7 +257,7 @@
   }
   
   .toolbar {
-    opacity: 0;
+    opacity: 1;
     flex-direction: row-reverse;
     align-items: center;
     color: rgba(0, 0, 0, 0.54);
@@ -266,12 +266,6 @@
     line-height: 26px;
     margin: 4px 0;
     position: relative;
-    transition: opacity 0.218s ease-in-out, background-color 0.218s ease-in-out,
-      box-shadow 0.218s ease-in-out;
-  }
-  
-  .toolbar:hover {
-    opacity: 1;
   }
   
   .toolbar-color,
@@ -281,8 +275,10 @@
     width: 20px;
     margin: 0 3px;
     cursor: pointer;
-    color: #202124;
-    opacity: 0.71;
+    background-color: rgba(207, 207, 207, 0.568);
+    border-radius: 25%;
+    opacity: 0.70;
+    
   }
   
   .toolbar-color-modal {
@@ -389,4 +385,65 @@
   
   #teal {
     background: #a7ffeb;
+  }
+
+    
+  .navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    height: auto;
+    background-color: #04AA6D;
+  }
+  
+  .navbar .search-container {
+    float: right;
+  }
+  
+  .navbar input[type=text] {
+    padding: 6px;
+    margin-top: 6px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .navbar .search-container button {
+    float: right;
+    padding: 8px 10px;
+    margin-top: 6px;
+    margin-right: 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+    .navbar .search-container{
+      float: none;
+      display: flex;
+    }
   }
