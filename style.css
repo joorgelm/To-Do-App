@@ -173,6 +173,7 @@ header {
 }
 
 #submit-button,
+#add-item-list,
 #form-close-button {
   margin: 0.2em 0;
   box-sizing: border-box;
@@ -252,6 +253,26 @@ header {
   outline: none;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+#note-check, #note-check-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.00625em;
+  border: 0;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+#add-new-item {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.00625em;
+  border: 0;
+  overflow: hidden;
+  margin-left: 5px;
 }
 
 .toolbar {

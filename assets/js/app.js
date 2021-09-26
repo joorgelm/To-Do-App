@@ -7,6 +7,7 @@ class App {
   
       this.$placeholder = document.querySelector("#placeholder");
       this.$form = document.querySelector("#form");
+      this.$list = document.querySelector("#form-List");
       this.$notes = document.querySelector("#notes");
       this.$noteTitle = document.querySelector("#note-title");
       this.$noteText = document.querySelector("#note-text");
@@ -75,19 +76,67 @@ class App {
     }
   
     handleFormClick(event) {
-      const isFormClicked = this.$form.contains(event.target);
+      if (this.$form) {
+        const isFormClicked = this.$form.contains(event.target);
   
-      const title = this.$noteTitle.value;
-      const text = this.$noteText.value;
-      const hasNote = title || text;
-  
-      if (isFormClicked) {
-        this.openForm();
-      } else if (hasNote) {
-        this.addNote({ title, text });
+        const title = this.$noteTitle.value;
+        const text = this.$noteText.value;
+        const hasNote = title || text;
+    
+        if (isFormClicked) {
+          this.openForm();
+        } else if (hasNote) {
+          this.addNote({ title, text });
+        } else {
+          this.closeForm();
+        }
+
       } else {
-        this.closeForm();
+
+        const isFormListClicked = this.$list.contains(event.target);
+  
+        const title = this.$noteTitle.value;
+        const text = this.$noteText.value;
+        const hasNote = title || text;
+    
+        if (isFormListClicked) {
+          this.openListForm();
+        } else if (hasNote) {
+          this.addListNote({ title, text });
+        } else {
+          this.closeListForm();
+        }
+
       }
+    }
+
+    addListNote({ title, text }) {
+
+      const newNote = {
+        title,
+        text,
+        color: "white",
+        id: this.notes.length > 0 ? this.notes[this.notes.length - 1].id + 1 : 1
+      };
+      this.notes = [...this.notes, newNote];
+      this.render();
+      this.closeForm();
+
+    }
+
+    closeListForm() {
+      this.$form.classList.remove("form-open");
+      this.$noteTitle.style.display = "none";
+      this.$formButtons.style.display = "none";
+      this.$noteTitle.value = "";
+      this.$noteText.value = "";
+    }
+
+    openListForm() {
+      this.$list.classList.add("form-open");
+      this.$noteTitle.style.display = "block";
+      this.$noteText.style.display = "none";
+      this.$formButtons.style.display = "block";
     }
   
     openForm() {
@@ -215,6 +264,16 @@ class App {
         )
         .join("");
     }
+  }
+
+ function addNewCheckItem() {
+    const formList = document.getElementById("form-list")
+    const container = document.getElementById("check-container")
+
+    const newContainer = container.cloneNode(true)
+
+    const buttons = document.getElementById("form-buttons")
+    formList.insertBefore(newContainer, buttons);
   }
   
   new App();
