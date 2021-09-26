@@ -398,6 +398,7 @@ header {
   color: white;
   text-decoration: none;
   font-size: 17px;
+  transition-duration: .5s;
 }
 
 .navbar a:hover {
@@ -429,6 +430,7 @@ header {
   font-size: 17px;
   border: none;
   cursor: pointer;
+  transition-duration: .5s;
 }
 
 .navbar .search-container button:hover {
