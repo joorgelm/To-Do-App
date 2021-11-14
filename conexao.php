@@ -1,5 +1,6 @@
 <?php
 
+    /* não terminei */   
     $hostname = "localhost";  /* não tenho ctz do endereço */ 
     $bancodedados = "bancodedados";
     $usuario = "usuario"; /* é root? */
