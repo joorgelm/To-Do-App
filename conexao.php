@@ -1,14 +1,13 @@
 <?php
 
-    /* não terminei */   
-    $hostname = "localhost";  /* não tenho ctz do endereço */ 
-    $bancodedados = "bancodedados";
-    $usuario = "usuario"; /* é root? */
-    $senha = "";
+$hostname = "localhost"; 
+$bancodedados = "bancodedados";
+$usuario = "root"; 
+$senha = "";
 
-    $mysqli = new mysqli ($hostname, $usuario, $senha, $bancodedados);
-    if ($mysqli->connect_errno) {
-        echo "Falha ao conectar: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+$mysqli = new mysqli ($hostname, $usuario, $senha, $bancodedados);
+if ($mysqli->connect_errno) {
+    echo "Falha ao conectar: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }
 
 ?>
