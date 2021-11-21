@@ -4,7 +4,8 @@ include("conexao.php");
 
 /* não tenho mta certeza dessa parte, 
 se algm perceber que ta errado
-me avisa que eu arrumo */ 
+me avisa que eu arrumo
+tem umas partes immprovisadas */ 
 
 $nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
 $usuario = mysqli_real_escape_string($conexao, trim($_POST['usuario']));
