@@ -32,3 +32,4 @@ if($row == 1) {
 	header('Location: '); /* a deifnir */
 	exit();
 }
+?>
