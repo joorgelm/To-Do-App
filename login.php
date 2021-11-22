@@ -2,14 +2,8 @@
 session_start();
 include('conexao.php');
 
-/* não tenho mta certeza dessa parte, 
-se algm perceber que ta errado
-me avisa que eu arrumo.
-As partes do banco são imporoviso,
-vou provavelmente editar depois. */ 
-
 if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-	header('Location: '); /* a definir */
+	header('Location: index.html'); 
 	exit();
 }
 
@@ -25,11 +19,11 @@ $row = mysqli_num_rows($result);
 if($row == 1) {
 	$usuario_bd = mysqli_fetch_assoc($result);
 	$_SESSION['nome'] = $usuario_bd['nome'];
-	header('Location: '); /* a definir */ 
+	header('Location: index.html'); 
 	exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;
-	header('Location: '); /* a deifnir */
+	header('Location: index.html'); 
 	exit();
 }
 ?>
