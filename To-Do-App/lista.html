@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Lista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i>To-Do</a>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Procure pelo titulo" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal-content">
+      <input class="modal-title" placeholder="Titulo da lista" type="text">
+      <input class="modal-text" placeholder="Criar uma lista de tarefas..." type="text">
+      <span class="modal-close-button">Fechar</span>
+    </div>
+  </div>
+  <main>
+    <header>
+      <h2 class="header-title">To Do</h2>
+    </header>
+    <!-- AQUI ESSA PORRA -->
+    <div id="form-container">
+      <form id="form-list" autocomplete="off">
+        <input id="note-title" placeholder="Titulo" type="text" required>
+        <input id="note-text" placeholder="Titulo" type="text">
+        <div id="check-container">
+            <input id="note-check" name="checkbox" placeholder="Criar uma lista de tarefas..." type="checkbox">
+            <label id="label-note-check" for="checkbox">
+                <input id="note-check-text" placeholder="" type="text">
+            </label>
+        </div>
+
+        <div id="form-buttons">
+        <button type="button" id="add-item-list" onclick="addNewCheckItem()">Adicionar novo item</button>
+          <button type="submit" id="submit-button">Confirmar</button>
+          <button type="button" id="form-close-button">Fechar</button>
+        </div>
+      </form>
+    </div>
+    <div id="notes"></div>
+    <div id="placeholder">
+      <img id="placeholder-logo" src="https://img.icons8.com/ios-filled/100/ffffff/ingredients-list.png">
+      <p id="placeholder-text">As tarefas adicionadas serao exibidas aqui</p>
+    </div>
+    <div id="color-tooltip">
+      <div class="color-option" data-color="#fff" id="white"></div>
+      <div class="color-option" data-color="#d7aefb" id="purple"></div>
+      <div class="color-option" data-color="#fbbc04" id="orange"></div>
+      <div class="color-option" data-color="#a7ffeb" id="teal"></div>
+    </div>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+

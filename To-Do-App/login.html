@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i>To-Do</a>
+  </div>
+  <form class="modal-content" action="index.html" method="post">
+    <div class="login-titulo">
+      <h2>Login</h2>
+    </div>
+    <div class="container-login">
+      <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="Insira o e-mail" name="email" required>
+
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Insira a senha" name="psw" required>
+        
+      <button type="submit">Login</button>
+    </div>
+    <div class="container-login" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn" onclick="window.location.href='home.html'">Cancelar</button>
+      <span class="sighup"><a href="cadastro.html">Cadastrar-se</a></span>
+    </div>
+  </form>
+</body>
+</html>
